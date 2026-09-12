@@ -1,0 +1,61 @@
+{
+  "name": "aadhaar-mask",
+  "version": "1.0.0",
+  "description": "Zero-dependency, regulation-compliant Indian Aadhaar number validator, Verhoeff checksum verifier, and 8-digit secure masker (XXXX XXXX 1234) for UIDAI and RBI compliance.",
+  "author": "Vijay Misal <misalvijay153@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjymisal0/aadhaar-mask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vjymisal0/aadhaar-mask/issues"
+  },
+  "homepage": "https://github.com/vjymisal0/aadhaar-mask#readme",
+  "keywords": [
+    "aadhaar",
+    "aadhaar-mask",
+    "uidai",
+    "verhoeff",
+    "kyc",
+    "india-compliance",
+    "rbi-compliance",
+    "fintech-india",
+    "aadhaar-validator",
+    "masking",
+    "checksum"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  },
+  "sideEffects": false
+}
