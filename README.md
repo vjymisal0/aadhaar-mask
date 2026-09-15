@@ -1,6 +1,6 @@
-# aadhaar-mask 🇮🇳
+# @vjymisal0/aadhaar-mask 🇮🇳
 
-[![npm version](https://img.shields.io/npm/v/aadhaar-mask.svg?color=blue)](https://www.npmjs.com/package/aadhaar-mask)
+[![npm version](https://img.shields.io/npm/v/@vjymisal0/aadhaar-mask.svg?color=blue)](https://www.npmjs.com/package/@vjymisal0/aadhaar-mask)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue.svg)](https://www.typescriptlang.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
@@ -40,7 +40,7 @@ Storing, displaying, or transmitting unmasked 12-digit Indian Aadhaar numbers is
 
 Many existing implementations rely on naive regular expressions, overlook UIDAI prefix restrictions, or fail to compute the rigorous **dihedral group $D_5$ Verhoeff checksum algorithm**.
 
-`aadhaar-mask` provides:
+`@vjymisal0/aadhaar-mask` provides:
 - **Zero Dependencies**: Pure, battle-tested TypeScript with 0 runtime dependencies.
 - **UIDAI & RBI Strict Compliance**: Enforces format rules, 0/1 prefix rejection, consecutive repeating digit rejection, and full Verhoeff checksum verification.
 - **Dual ESM & CommonJS**: Ships with `.d.ts`, `.d.mts`, and `.d.cts` for full compatibility with Node.js, Next.js, Vite, Nuxt, Remix, and Bun.
@@ -74,16 +74,16 @@ Many existing implementations rely on naive regular expressions, overlook UIDAI 
 
 ```bash
 # npm
-npm install aadhaar-mask
+npm install @vjymisal0/aadhaar-mask
 
 # pnpm
-pnpm add aadhaar-mask
+pnpm add @vjymisal0/aadhaar-mask
 
 # yarn
-yarn add aadhaar-mask
+yarn add @vjymisal0/aadhaar-mask
 
 # bun
-bun add aadhaar-mask
+bun add @vjymisal0/aadhaar-mask
 ```
 
 ---
@@ -97,7 +97,7 @@ import {
   maskAadhaar,
   isValidAadhaar,
   formatAadhaar,
-} from 'aadhaar-mask';
+} from '@vjymisal0/aadhaar-mask';
 
 // 1. Validate an Aadhaar number
 const validation = validateAadhaar('2345 6789 0125');
