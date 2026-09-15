@@ -1,6 +1,7 @@
 # @vjymisal0/aadhaar-mask 🇮🇳
 
 [![npm version](https://img.shields.io/npm/v/@vjymisal0/aadhaar-mask.svg?color=blue)](https://www.npmjs.com/package/@vjymisal0/aadhaar-mask)
+[![CI](https://github.com/vjymisal0/aadhaar-mask/actions/workflows/ci.yml/badge.svg)](https://github.com/vjymisal0/aadhaar-mask/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue.svg)](https://www.typescriptlang.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
