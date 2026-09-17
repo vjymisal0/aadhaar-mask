@@ -120,7 +120,7 @@ if (isValidAadhaar('2345 6789 0125')) {
 
 ### CommonJS
 ```javascript
-const { validateAadhaar, maskAadhaar } = require('aadhaar-mask');
+const { validateAadhaar, maskAadhaar } = require('@vjymisal0/aadhaar-mask');
 
 const masked = maskAadhaar('234567890125');
 console.log(masked); // "XXXX XXXX 0125"
@@ -151,7 +151,7 @@ interface AadhaarValidationResult {
 
 **Example:**
 ```typescript
-import { validateAadhaar } from 'aadhaar-mask';
+import { validateAadhaar } from '@vjymisal0/aadhaar-mask';
 
 // Valid
 validateAadhaar('3675 9834 2981');
@@ -173,7 +173,7 @@ validateAadhaar('23456');
 Convenient shorthand function returning boolean `true` if valid, `false` otherwise.
 
 ```typescript
-import { isValidAadhaar } from 'aadhaar-mask';
+import { isValidAadhaar } from '@vjymisal0/aadhaar-mask';
 
 if (!isValidAadhaar(userInput)) {
   throw new Error('Please provide a valid 12-digit Aadhaar number');
@@ -214,7 +214,7 @@ interface AadhaarMaskOptions {
 
 **Examples:**
 ```typescript
-import { maskAadhaar } from 'aadhaar-mask';
+import { maskAadhaar } from '@vjymisal0/aadhaar-mask';
 
 const num = '367598342981';
 
@@ -246,7 +246,7 @@ maskAadhaar('234567890123', { validate: 'lenient' });
 Checks if a string is already in a recognized masked Aadhaar format.
 
 ```typescript
-import { isAadhaarMasked } from 'aadhaar-mask';
+import { isAadhaarMasked } from '@vjymisal0/aadhaar-mask';
 
 isAadhaarMasked('XXXX XXXX 1234'); // true
 isAadhaarMasked('XXXX-XXXX-1234'); // true
@@ -262,7 +262,7 @@ isAadhaarMasked('2345 6789 1234'); // false (unmasked)
 Performs standalone Verhoeff checksum validation on any numeric string.
 
 ```typescript
-import { validateVerhoeff } from 'aadhaar-mask';
+import { validateVerhoeff } from '@vjymisal0/aadhaar-mask';
 
 validateVerhoeff('2363'); // true
 validateVerhoeff('2364'); // false
@@ -275,7 +275,7 @@ validateVerhoeff('2364'); // false
 Calculates the single Verhoeff check digit for any base digit string.
 
 ```typescript
-import { generateVerhoeffCheckDigit, appendVerhoeffCheckDigit } from 'aadhaar-mask';
+import { generateVerhoeffCheckDigit, appendVerhoeffCheckDigit } from '@vjymisal0/aadhaar-mask';
 
 const check = generateVerhoeffCheckDigit('236'); // 3
 const full = appendVerhoeffCheckDigit('236');    // "2363"
@@ -288,7 +288,7 @@ const full = appendVerhoeffCheckDigit('236');    // "2363"
 Pretty-prints or un-formats 12-digit Aadhaar numbers.
 
 ```typescript
-import { formatAadhaar, unformatAadhaar } from 'aadhaar-mask';
+import { formatAadhaar, unformatAadhaar } from '@vjymisal0/aadhaar-mask';
 
 formatAadhaar('234567891234');       // "2345 6789 1234"
 formatAadhaar('234567891234', '-');  // "2345-6789-1234"
@@ -306,7 +306,7 @@ Generates synthetically valid 12-digit Aadhaar numbers complying with all UIDAI 
 > ⚠️ **Notice**: These numbers are mathematically sound synthetic numbers for testing purposes and do not correspond to real citizen records.
 
 ```typescript
-import { generateAadhaar } from 'aadhaar-mask';
+import { generateAadhaar } from '@vjymisal0/aadhaar-mask';
 
 const testAadhaar = generateAadhaar();
 // e.g. "582914389024"
@@ -322,7 +322,7 @@ const formatted = generateAadhaar({ separator: ' ' });
 All thrown errors inherit from `AadhaarValidationError`, exposing an explicit machine-readable `code`:
 
 ```typescript
-import { maskAadhaar, AadhaarValidationError } from 'aadhaar-mask';
+import { maskAadhaar, AadhaarValidationError } from '@vjymisal0/aadhaar-mask';
 
 try {
   maskAadhaar('invalid-aadhaar');
