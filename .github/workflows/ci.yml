@@ -28,3 +28,10 @@ jobs:
         run: npm run build --if-present
       - name: Inspect package contents
         run: npm pack --dry-run
+      - name: Validate packed artifact
+        run: |
+          mkdir -p "$RUNNER_TEMP/package-artifact" "$RUNNER_TEMP/package-consumer"
+          npm pack --pack-destination "$RUNNER_TEMP/package-artifact"
+          cd "$RUNNER_TEMP/package-consumer"
+          npm init -y
+          npm install "$RUNNER_TEMP/package-artifact"/*.tgz
