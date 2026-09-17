@@ -1,6 +1,6 @@
 {
   "name": "@vjymisal0/aadhaar-mask",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zero-dependency, regulation-compliant Indian Aadhaar number validator, Verhoeff checksum verifier, and 8-digit secure masker (XXXX XXXX 1234) for UIDAI and RBI compliance.",
   "author": "Vijay Misal <misalvijay153@gmail.com>",
   "license": "MIT",

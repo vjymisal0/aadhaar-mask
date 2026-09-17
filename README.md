@@ -396,3 +396,7 @@ npm run typecheck
 ## License
 
 [MIT](LICENSE) © [Vijay Misal](mailto:misalvijay153@gmail.com)
+
+## Security and compliance note
+
+This library performs local format/checksum operations and masking. It is not an official UIDAI verification service or certification of regulatory compliance.
